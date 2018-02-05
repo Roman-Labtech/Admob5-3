@@ -83,12 +83,16 @@ export class FirstPage {
 	var s;	
 	var a=Number(this.inp1);	
 	var h=Number(this.inp2);
-	
+	var numchislo=3;
 //Проверка положительность введенных чисел
 if (isFinite(a) &&(a>0)){	
 if (isFinite(h) &&(h>0)){
 
     s=(a)*0.5*h;
+    if(numchislo=3){
+        s=s.toFixed(numchislo); 
+    }
+    
 	let alert = this.alertCtrl.create({
       title: 'New Friend!',
       subTitle: 'Площадь равна S=' + s,
