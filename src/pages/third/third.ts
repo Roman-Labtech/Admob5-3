@@ -46,105 +46,9 @@ export class ThirdPage {
 
 	
 	
-	showAlert() {
 
-	var x1=this.inp1;
-	var x2=this.inp2;
-	var x3=this.inp3;
-		var a=x1;
-		var b=x2;
-		var c=x3;
-	}
 
 		
-	tri_storony() {	
-	var x1=Number(this.inp1);
-	var x2=Number(this.inp2);	
-	var x3=Number(this.inp3);
-	var s;
-   ////////////////////////////////
-		
-		var xx;
-		var a=x1;
-var b=x2;
-var c=x3;
-//Проверка на числа
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){
-if (!isNaN(parseFloat(b)) && isFinite(b) &&(b>0)){
-if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0)){
-	  //Проверка на существование треугольника          
-    if(a<b+c){
-		if(b<a+c){
-			if(c<a+b){
-				xx=(a+b+c)/2;			  
-						xx=xx*(xx-a)*(xx-b)*(xx-c)						
-						xx=Math.sqrt(xx);
-						s=xx;
-				     let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Площадь равна S=' + s,
-      buttons: ['OK']
-    });
-    alert.present();
-			}
-				else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-}
-		}
-			else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-}
-	}
-    else{
-		    let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-	
-	};
- }}
-	else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-}
-}
-	else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-};
-		
-		//////////////
-		
-
-  }
 	
 	//ygol_i_2_storony
 	
@@ -156,9 +60,9 @@ if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0)){
    ////////////////////////////////
 		var xx;
 //Проверка на числа
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){
-if (!isNaN(parseFloat(b)) && isFinite(b) &&(b>0)){
-if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0 & c<180)){
+if (isFinite(a) &&(a>0)){
+if (isFinite(b) &&(b>0)){
+if (isFinite(c) &&(c>0 & c<180)){
 	  //Проверка на существование треугольника          
 
 	s=Math.sin(c / 180 * Math.PI);	

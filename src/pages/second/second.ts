@@ -46,16 +46,6 @@ export class SecondPage {
 
 	
 	
-	showAlert() {
-
-	var x1=this.inp1;
-	var x2=this.inp2;
-	var x3=this.inp3;
-		var a=x1;
-		var b=x2;
-		var c=x3;
-	}
-
 		
 	tri_storony() {	
 	var x1=Number(this.inp1);
@@ -69,9 +59,9 @@ export class SecondPage {
 var b=x2;
 var c=x3;
 //Проверка на числа
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){
-if (!isNaN(parseFloat(b)) && isFinite(b) &&(b>0)){
-if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0)){
+if (isFinite(a) &&(a>0)){
+if (isFinite(b) &&(b>0)){
+if (isFinite(c) &&(c>0)){
 	  //Проверка на существование треугольника          
     if(a<b+c){
 		if(b<a+c){
@@ -148,76 +138,7 @@ if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0)){
 	
 	//ygol_i_2_storony
 	
-	ygol_i_2_storony() {	
-	var a=Number(this.inp1);
-	var b=Number(this.inp2);	
-	var c=Number(this.inp4);
-	var s;
-   ////////////////////////////////
-		var xx;
-//Проверка на числа
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){
-if (!isNaN(parseFloat(b)) && isFinite(b) &&(b>0)){
-if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0 & c<180)){
-	  //Проверка на существование треугольника          
 
-	s=Math.sin(c / 180 * Math.PI);	
-	s=(0.5)*(s*a*b);	
-	let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Площадь равна S=' + s,
-      buttons: ['OK']
-    });
-    alert.present();
-			}
-			
-	
-    else{
-		    let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
-      buttons: ['OK']
-    });
-    alert.present();
-	
-	};
- }
-	else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-}
-}
-	else
-{
-
-	let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Треугольник не существует. Введите корректные значения',
-      buttons: ['OK']
-    });
-    alert.present();
-}};
- 
-	ygol_i_2_storony1() {
-		 let alert = this.alertCtrl.create({
-      title: 'Ошибкаxxxxxxxxxx!',
-      subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
-      buttons: ['OK']
-    });
-    alert.present();
-	};
-
-	ygol_i_2_storony2() {
-		function ygol_i_2_storony1();
-			
-
-	}
 			
 		//////////////
 	link3stor(){
@@ -225,45 +146,6 @@ if (!isNaN(parseFloat(c)) && isFinite(c) &&(c>0 & c<180)){
 	}
 	
 	
-	//////////////
-	
-	osn_i_vysota(){
-	var s;	
-	var a=Number(this.inp1);	
-	var h=Number(this.inp2);
-	
-//Проверка положительность введенных чисел
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){	
-if (!isNaN(parseFloat(h)) && isFinite(h) &&(h>0)){
-
-    s=(a)*0.5*h;
-	let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Площадь равна S=' + s,
-      buttons: ['OK']
-    });
-    alert.present();
- 
-}
-		else		
-{
-	  let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
-      buttons: ['OK']
-    });
-    alert.present();
-}
-} 		
-	else		
-{
-	  let alert = this.alertCtrl.create({
-      title: 'Ошибка!',
-      subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
-      buttons: ['OK']
-    });
-    alert.present();
-};};
 	
 	firstgo(){
 		this.navCtrl.push(FirstPage);
