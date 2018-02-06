@@ -41,7 +41,7 @@ export class ThirdPage {
 	
 	public inp1;
 	public inp2;
-	public inp3;
+	public inp4;
 	
 
 	
@@ -62,7 +62,7 @@ export class ThirdPage {
 //Проверка на числа
 if (isFinite(a) &&(a>0)){
 if (isFinite(b) &&(b>0)){
-if (isFinite(c) &&(c>0 & c<180)){
+if (isFinite(c) &&(c>0 && c<180)){
 	  //Проверка на существование треугольника          
 
 	s=Math.sin(c / 180 * Math.PI);	
@@ -117,11 +117,7 @@ if (isFinite(c) &&(c>0 & c<180)){
     alert.present();
 	};
 
-	ygol_i_2_storony2() {
-		function ygol_i_2_storony1();
-			
-
-	}
+	
 			
 		//////////////
 	link3stor(){
@@ -137,8 +133,8 @@ if (isFinite(c) &&(c>0 & c<180)){
 	var h=Number(this.inp2);
 	
 //Проверка положительность введенных чисел
-if (!isNaN(parseFloat(a)) && isFinite(a) &&(a>0)){	
-if (!isNaN(parseFloat(h)) && isFinite(h) &&(h>0)){
+if (isFinite(a) &&(a>0)){	
+if (isFinite(h) &&(h>0)){
 
     s=(a)*0.5*h;
 	let alert = this.alertCtrl.create({
@@ -169,9 +165,7 @@ if (!isNaN(parseFloat(h)) && isFinite(h) &&(h>0)){
     alert.present();
 };};
 	
-	firstgo(){
-		this.navCtrl.push(FirstPage);
-	}
+
 	
 homego(){
 		this.navCtrl.push(HomePage);
